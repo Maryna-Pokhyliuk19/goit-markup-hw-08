@@ -194,11 +194,6 @@ h6 {
   margin: 0 auto;
 }
 
-.skills__list {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
 @media screen and (min-width: 768px) {
   .skills__list {
     display: flex;
@@ -281,6 +276,65 @@ h6 {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .activity {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.activity {
+  padding-top: 0;
+}
+
+.activity__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-title-color);
+  margin-bottom: 50px;
+}
+
+.activity__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.activity__list {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+}
+
+.box__text {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 1;
+  color: #FFFFFF;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.box__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .our-team {
   background-color: var(--btn-background-second-color);
 }
@@ -293,7 +347,6 @@ h6 {
   letter-spacing: 0.03em;
   color: var(--second-title-color);
   margin-bottom: 30px;
-  padding-top: 60px;
 }
 
 .our-team__img {
@@ -484,6 +537,14 @@ h6 {
 
 .clients__icon {
   fill: currentColor;
+}
+
+@media screen and (min-width: 786px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
 }
 
 .footer {

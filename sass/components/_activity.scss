@@ -1,0 +1,28 @@
+@media screen and (max-width:1200px) {
+    .activity {
+visibility: hidden;
+display: none;
+    }
+}
+
+.activity {
+    padding-top: 0;
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--second-title-color);
+        margin-bottom: 50px;
+    }
+}
+
+.activity__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.activity__list { 
+    display: flex;
+    align-items: center;
+}
