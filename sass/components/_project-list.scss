@@ -1,22 +1,33 @@
 .project-list {
+    @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: -30px;
+    margin-bottom: -30px;
     margin-top: calc(-1 * var(--project-gap));
     margin-left: calc(-1 * var(--project-gap));
-}
+}}
 
 .project-item {
     margin-top: var(--project-gap);
     margin-left: var(--project-gap);
-    flex-basis: calc(100% / 3 - var(--project-gap));
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+ //   flex-basis: calc(100% / 3 - var(--project-gap));
 }
 
 .project-item:nth-child(3n) {
     margin-right: 0;
-}
+    margin-bottom: 30px;
+
+    }
 
 .project-link:hover {
-    display: block;
+ //   display: block;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -24,6 +35,7 @@
 }
 
 .project-card {
+    
     padding-top: 20px;
     padding-right: 24px;
     padding-bottom: 20px;
@@ -49,15 +61,15 @@
 }
 
 .project-img {
-    display: block;
-    max-width: 100%;
+ //   display: block;
+    width: 100%;
     height: auto;
 }
 
 .project-box {
     position: relative;
     overflow: hidden;
-    display: block;
+//    display: block;
 }
 
 .project-overlay {
@@ -79,8 +91,9 @@
         bottom: 63px;
         left: 24px;
     
-        display: block;
-        width: 322px;
+      //  display: block;
+     //   width: 322px;
+        width: 100%;
         height: 100%;
     
     
