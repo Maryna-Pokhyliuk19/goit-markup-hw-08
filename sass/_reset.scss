@@ -49,9 +49,11 @@ h6 {
 }
 
 .section {
-  //  padding-top: 94px;
-  //  padding-bottom: 94px;
-  margin-bottom: 60px;
+    padding: 60px 0;
+
+    @media screen and (min-width:1200px) {
+        padding: 94px 0;
+    }
 }
 
 .visually-hidden {
