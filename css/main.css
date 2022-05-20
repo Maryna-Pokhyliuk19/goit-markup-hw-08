@@ -53,6 +53,10 @@ h6 {
   }
 }
 
+.section {
+  margin-bottom: 60px;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -194,6 +198,7 @@ h6 {
   .skills__list {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
   }
 }
 
@@ -273,12 +278,6 @@ h6 {
 
 .our-team {
   background-color: var(--btn-background-second-color);
-}
-
-@media screen and (min-width: 768px) {
-  .our-team {
-    margin-bottom: 60px;
-  }
 }
 
 .our-team__title {
@@ -413,6 +412,25 @@ h6 {
   .clients__list {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    display: flex;
+    justify-items: center;
+    margin: auto;
   }
 }
 
@@ -420,6 +438,18 @@ h6 {
   .clients__item {
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item:not(:last-child) {
     margin-right: 30px;
   }
 }
