@@ -96,6 +96,20 @@ h6 {
   --border-color: #EEEEEE;
 }
 
+@media screen and (min-width: 480px) {
+  .header__container {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -115,7 +129,6 @@ h6 {
   color: var(--accent-color);
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 15px;
 }
 
 .header-sublogo__link {
@@ -137,6 +150,12 @@ h6 {
   margin-left: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .menu-button .icon-close {
   display: none;
 }
@@ -149,13 +168,13 @@ h6 {
   display: block;
 }
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 767px) {
   .menu-list {
     visibility: hidden;
   }
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .menu-list {
     display: flex;
     align-items: center;
@@ -185,32 +204,46 @@ h6 {
   color: var(--accent-color);
 }
 
-.connect-list {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 767px) {
   .connect-list {
-    visibility: hidden;
+    display: none;
   }
 }
 
-.connect-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .connect-list {
+    margin-left: auto;
+  }
 }
 
-.connect-list__icon {
-  fill: currentColor;
-  margin-right: 10px;
+@media screen and (min-width: 1200px) {
+  .connect-list {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  .connect-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .connect-list__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
 }
 
-.connect-list__item {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (min-width: 768px) {
+  .connect-list__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .connect-list__icon {
+    fill: currentColor;
+    margin-right: 8px;
+  }
 }
 
 .connect-list__link {
@@ -246,13 +279,47 @@ h6 {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
   margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--main-content-color);
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-2x.jpg);
+  }
 }
 
 .hero__title {
@@ -263,13 +330,16 @@ h6 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-title-color);
+  max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .hero__title {
-    width: 480px;
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.62;
   }
 }
 
@@ -961,5 +1031,109 @@ h6 {
   color: var(--main-btn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-item {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.project-link:hover {
+  display: block;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.project-card {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-card__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-title-color);
+  margin-bottom: 4px;
+}
+
+.project-card__text {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.project-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.project-box {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-overlay__text {
+  position: absolute;
+  top: 63px;
+  right: 24px;
+  bottom: 63px;
+  left: 24px;
+  display: block;
+  width: 322px;
+  height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.project-link:hover .project-overlay {
+  transform: translateY(0%);
 }
 /*# sourceMappingURL=main.css.map */

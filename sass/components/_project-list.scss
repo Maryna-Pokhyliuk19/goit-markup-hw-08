@@ -1,4 +1,5 @@
 .project-list {
+    
     @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +12,8 @@
 .project-item {
     @media screen and (min-width: 768px) {
         flex-basis: calc((100% - 2 * 30px) / 2);
-        
+        margin-right: 30px;
+        margin-bottom: 30px;
     }
     @media screen and (min-width: 1200px) {
         flex-basis: calc((100% - 3 * 30px) / 3);
@@ -23,12 +25,6 @@
     }
 }
 }
-
-.project-item:nth-child(3n) {
-    margin-right: 0;
-    margin-bottom: 30px;
-
-    }
 
 .project-link:hover {
     display: block;
@@ -65,15 +61,15 @@
 }
 
 .project-img {
- //   display: block;
-    width: 100%;
+    display: block;
+    max-width: 100%;
     height: auto;
 }
 
 .project-box {
     position: relative;
     overflow: hidden;
-//    display: block;
+    display: block;
 }
 
 .project-overlay {
@@ -95,9 +91,8 @@
         bottom: 63px;
         left: 24px;
     
-      //  display: block;
-     //   width: 322px;
-        width: 100%;
+        display: block;
+        width: 322px;
         height: 100%;
     
     

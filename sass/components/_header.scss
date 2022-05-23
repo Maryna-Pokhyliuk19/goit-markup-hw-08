@@ -1,9 +1,12 @@
 .header__container {
-//display: flex;
-//align-items: center;
-
-
+@media screen and (min-width:480px) {
+    height: 60px;
 }
+@media screen and (min-width:768px) {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}}
 
 .navigation {
     display: flex;
@@ -25,7 +28,7 @@
     color: var(--accent-color);
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: 15px;
+    
 }
 
 .header-sublogo__link {
@@ -45,6 +48,9 @@
     padding: 0;
     display: inline-flex;
     margin-left: auto;
+    @media screen and (min-width:768px) {
+        display: none;
+    }
 }
 
 .menu-button .icon-close {
