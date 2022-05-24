@@ -32,10 +32,22 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    
+}
+.project-link {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
 .project-card {
-    
+    @media screen and (min-width: 768px) {
+        flex-grow: 1;
+    }
+}
+.project-card {
     padding-top: 20px;
     padding-right: 24px;
     padding-bottom: 20px;
@@ -43,6 +55,7 @@
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    
     &__title {
     
         font-weight: 700;
