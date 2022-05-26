@@ -11,7 +11,9 @@
 .navigation {
     display: flex;
     align-items: center;
-    
+    @media screen and (max-width:767px) {
+      position: relative;
+    }
 }
 
 .header {
@@ -57,10 +59,10 @@
     display: none;
 }
 
-.menu-button .is-open .icon-close {
+.menu-button.is-open .icon-close {
     display: block;
 }
 
-.menu-button .is-open .icon-menu {
-    display: block;
+.menu-button.is-open .icon-menu {
+    display: none;
 }
