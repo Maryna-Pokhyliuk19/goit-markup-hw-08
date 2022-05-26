@@ -1,25 +1,19 @@
 
 .mob {
-    position: fixed;
+    @media screen and (max-width:767px) {    position: fixed;
     background-color: #FFFFFF;
     z-index: 1;
     width: 100%;
     height: 100vh;
     left: 0px;
     top: 0px;
-    padding-top: 10px;
-    padding-bottom: 48px;
+    padding: 40px, 48px;
+    transform: translateY(100%);
+    }
+}
 
-    @media screen and (min-width:768px) {
-        display: none;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: space-between;
-        overflow-y: auto;
-    }
+.mob.is-open {
+    transform: translateY(0);
 }
 
 .mob-close-button {
@@ -34,7 +28,7 @@
 }
 
 .mob-menu-list {
-    padding-top: 48px;
+    
 }
 
 .mob-menu-list__item {
