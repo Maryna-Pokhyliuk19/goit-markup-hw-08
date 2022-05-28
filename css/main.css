@@ -1402,7 +1402,6 @@ h6 {
     height: 100%;
     left: 0px;
     top: 0px;
-    padding-left: 48px;
     padding-top: 48px;
     padding-bottom: 48px;
     transform: translateY(100%);
@@ -1425,21 +1424,25 @@ h6 {
   border: none;
   display: block;
   margin-left: auto;
-  position: fixed;
   cursor: pointer;
-  top: 10px;
+  padding-top: 10px;
 }
 
-.mob-menu-list__link {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  color: #212121;
+.icon-close:hover {
+  fill: var(--accent-color);
 }
 
-.mob-menu-list__link:hover {
-  color: var(--accent-color);
+@media screen and (min-width: 320px) {
+  .mob-menu-list__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #212121;
+  }
+  .mob-menu-list__link:hover {
+    color: var(--accent-color);
+  }
 }
 
 .mob-menu-list__item:not(:last-child) {
@@ -1480,12 +1483,12 @@ h6 {
 
 .mob-soc-list {
   display: flex;
-  margin-left: 40px;
   margin-top: 64px;
+  padding-left: 40px;
 }
 
 .mob-soc-list__item {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .mob-soc-list__link {
