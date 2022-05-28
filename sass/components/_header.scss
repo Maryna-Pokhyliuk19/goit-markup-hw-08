@@ -12,12 +12,15 @@
     display: flex;
     align-items: center;
     @media screen and (max-width:767px) {
-    position: relative;
+    
     }
 }
 
 .header {
     border-bottom: 1px solid #ECECEC;
+    @media screen and (min-width:768px) {
+        position: relative;
+    }
 }
 
 .header-logo__link {
